@@ -1,0 +1,80 @@
+body {
+    background-image: url(../images/endless-constellation.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-repeat: repeat-y;
+    position: relative;
+}
+
+
+.custom-bg {
+    background-color: rgba(255, 255, 255, 0.17);
+    box-shadow: 3px 8px 6px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.custom-bg2 {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 3px 8px 6px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+
+.square1 {
+    background-color: rgba(255, 255, 255, 0.17);
+    box-shadow: 3px 8px 6px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    left: 300px;
+    top: 100px;
+    animation-name: motion;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.square2 {
+    background-color: rgba(255, 255, 255, 0.17);
+    box-shadow: 3px 8px 6px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 300px;
+    bottom: 50px;
+    animation-name: motion;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes motion {
+    0% {
+        transform: translateX(-10%);
+    }
+
+    20% {
+        transform: translatey(10%);
+    }
+
+    40% {
+        transform: translateX(-10%);
+    }
+
+    60% {
+        transform: translatey(10%);
+    }
+
+    80% {
+        transform: translateX(-10%);
+    }
+
+    90% {
+        transform: translatey(10%);
+    }
+
+    100% {
+        transform: translateX(-10%);
+    }
+}

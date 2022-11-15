@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Bookmark</title>
+</head>
+
+<body>
+    <div class="layer">
+        <div class="w-50 m-auto mb-3 py-5 text-center ">
+            <h1 class="font-monospace fst-italic text-white">Bookmarker</h1>
+        </div>
+        <div class="square1"></div>
+        <div class="square2"></div>
+        <div id="mainDiv"
+            class=" py-5 text-white custom-bg w-50 m-auto text-center d-flex justify-content-center align-items-center">
+            <div class="p-3 w-100">
+                <label for="" class="mb-3 fs-4 fst-italic">Site Name</label>
+                <input type="text" placeholder="Bookmark Name" class="form-control mb-3" id="siteName"
+                    onkeyup="validateSiteName()">
+                <p class="text-danger d-none" id="errorName">please enter site name (it should contain letters only)</p>
+                <label for="" class="mb-3 fs-4 fst-italic">Site Url</label>
+                <input type="text" placeholder="Website URL" class="form-control mb-5" id="siteUrl"
+                    onkeyup=" validateSiteUrl()">
+                <p class="text-danger d-none" id="errorUrl">please enter a valid URL (ex.: www.website.com)</p>
+
+                <button class="btn btn-outline-light fw-bold fst-italic" id="btn" onclick="addSite()">Submit</button>
+                <button class="btn btn-outline-light fw-bold fst-italic" id="btn" onclick="goToList()">Go to
+                    Bookmarks</button>
+
+            </div>
+        </div>
+        <div id="secondaryDiv"
+            class=" d-none py-5 custom-bg w-75 m-auto text-center d-flex justify-content-center align-items-center flex-column">
+            <div class="w-50 m-auto mb-5 text-white">
+                <label for="" class="fs-3 mb-2">Search</label>
+                <input type="text" class="form-control" oninput="search(this.value)">
+
+            </div>
+            <table class="table text-white">
+                <thead>
+                    <th>index</th>
+                    <th>site name</th>
+                    <th>site URL</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </thead>
+                <tbody id="tableData">
+
+
+                </tbody>
+
+            </table>
+            <div>
+                <button class="btn btn-outline-success fw-bold fst-italic" id="addAnother" onclick="back()">Add
+                    another
+                    Bookmark
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
